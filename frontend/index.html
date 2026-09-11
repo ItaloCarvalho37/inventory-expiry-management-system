@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Inventory & Expiration Management System</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Inventory & Expiration Management System</h1>
+    <p>Inventory and expiration monitoring dashboard</p>
+  </header>
+
+  <main>
+
+    <section class="summary">
+
+      <div class="card">
+        <h2 id="total">0</h2>
+        <p>Total Items</p>
+      </div>
+
+      <div class="card">
+        <h2 id="vencidos">0</h2>
+        <p>Expired</p>
+      </div>
+
+      <div class="card">
+        <h2 id="atencao">0</h2>
+        <p>Attention</p>
+      </div>
+
+      <div class="card">
+        <h2 id="normais">0</h2>
+        <p>Normal</p>
+      </div>
+
+    </section>
+
+    <section class="inventory">
+
+      <input
+        type="text"
+        id="busca"
+        placeholder="Search item..."
+      >
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Expiration</th>
+            <th>Days Remaining</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody id="listaItens"></tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
