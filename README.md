@@ -43,6 +43,29 @@ The next development stage is the integration with a mobile application, allowin
 
 ### 🎓 About
 
+## 🏗️ Architecture
+
+The project follows a simple architecture:
+
+Google Sheets
+↓
+Google Apps Script
+↓
+Data processing and classification
+↓
+Web Dashboard
+↓
+Mobile application (in development)
+
+## 🚧 Development Status
+
+- ✅ Inventory monitoring
+- ✅ Expiration date processing
+- ✅ Automatic classification
+- ✅ Reports
+- ✅ Web dashboard
+- 🚧 Mobile notifications
+
 This project is part of my learning journey in Computer Science and software development.
 
 It was created as a practical project to apply programming concepts and develop a solution for a real-world problem.
