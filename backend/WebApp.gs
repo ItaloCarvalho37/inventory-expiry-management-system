@@ -1,16 +1,23 @@
 function doGet() {
+
   return HtmlService
     .createHtmlOutputFromFile("index")
     .setTitle(CONFIG.NOME_SISTEMA);
 }
 
 function obterDadosDashboard() {
+
   const itens = obterItensEstoque();
-  const itensProcessados = processarItens(itens);
-  const itensClassificados = aplicarClassificacao(itensProcessados);
+
+  const itensProcessados =
+    processarItens(itens);
+
+  const itensClassificados =
+    aplicarClassificacao(itensProcessados);
 
   return {
     itens: itensClassificados,
-    relatorio: gerarRelatorio(itensClassificados)
+    relatorio:
+      gerarRelatorio(itensClassificados)
   };
 }
