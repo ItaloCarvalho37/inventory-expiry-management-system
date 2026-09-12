@@ -1,4 +1,5 @@
 function calcularDiasRestantes(vencimento) {
+
   if (!vencimento) {
     return null;
   }
@@ -16,12 +17,17 @@ function calcularDiasRestantes(vencimento) {
 
   const diferenca = dataVencimento - hoje;
 
-  return Math.ceil(diferenca / (1000 * 60 * 60 * 24));
+  return Math.ceil(
+    diferenca / (1000 * 60 * 60 * 24)
+  );
 }
 
 function processarItens(itens) {
+
   return itens.map(item => ({
     ...item,
-    diasRestantes: calcularDiasRestantes(item.vencimento)
+    diasRestantes: calcularDiasRestantes(
+      item.vencimento
+    )
   }));
 }
