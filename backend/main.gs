@@ -1,10 +1,14 @@
 function executarSistema() {
   const itens = obterItensEstoque();
-  const processados = processarItens(itens);
-  const classificados = aplicarClassificacao(processados);
+
+  const itensProcessados = processarItens(itens);
+
+  const itensClassificados = aplicarClassificacao(itensProcessados);
+
+  const relatorio = gerarRelatorio(itensClassificados);
 
   return {
-    itens: classificados,
-    relatorio: gerarRelatorio(classificados)
+    itens: itensClassificados,
+    relatorio: relatorio
   };
 }
