@@ -8,8 +8,6 @@ function obterItensEstoque() {
     return [];
   }
 
-  const cabecalho = dados[0];
-
   return dados.slice(1).map(linha => ({
     id: linha[0],
     item: linha[1],
