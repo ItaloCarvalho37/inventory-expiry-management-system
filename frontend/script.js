@@ -3,6 +3,7 @@ let itens = [];
 function carregarDashboard() {
   google.script.run
     .withSuccessHandler(dados => {
+
       itens = dados.itens;
 
       document.getElementById("total").textContent =
@@ -28,6 +29,7 @@ function exibirItens(lista) {
   tabela.innerHTML = "";
 
   lista.forEach(item => {
+
     const linha = document.createElement("tr");
 
     linha.innerHTML = `
@@ -44,13 +46,16 @@ function exibirItens(lista) {
 }
 
 function filtrarItens() {
+
   const termo = document
     .getElementById("busca")
     .value
     .toLowerCase();
 
   const resultado = itens.filter(item =>
-    String(item.item).toLowerCase().includes(termo)
+    String(item.item)
+      .toLowerCase()
+      .includes(termo)
   );
 
   exibirItens(resultado);
