@@ -1,4 +1,5 @@
 function gerarRelatorio(itens) {
+
   const relatorio = {
     total: itens.length,
     vencidos: 0,
@@ -8,7 +9,9 @@ function gerarRelatorio(itens) {
   };
 
   itens.forEach(item => {
+
     switch (item.status) {
+
       case "VENCIDO":
         relatorio.vencidos++;
         break;
