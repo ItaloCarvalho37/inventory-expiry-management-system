@@ -1,8 +1,13 @@
 function obterItensEstoque() {
-  const planilha = SpreadsheetApp.getActiveSpreadsheet();
-  const aba = planilha.getSheets()[0];
 
-  const dados = aba.getDataRange().getValues();
+  const planilha =
+    SpreadsheetApp.getActiveSpreadsheet();
+
+  const aba =
+    planilha.getSheets()[0];
+
+  const dados =
+    aba.getDataRange().getValues();
 
   if (dados.length <= 1) {
     return [];
